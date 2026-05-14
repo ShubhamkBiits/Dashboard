@@ -1,0 +1,173 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* APP */
+.app-container {
+  width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #1E293B;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* LEFT NAV LINKS */
+.nav-left {
+  display: flex;
+  gap: 50px;
+}
+
+/* NAV LINKS */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #38BDF8;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* EMPLOYEE INFO */
+.employee-info {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: bold;
+  color: #E2E8F0;
+}
+
+/* LOGOUT BUTTON */
+.logout-box {
+  background-color: transparent;
+  color: white;
+
+  border: 2px solid #38BDF8;
+  padding: 10px 18px;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.logout-box:hover {
+  background-color: #38BDF8;
+  color: #0F172A;
+}
+
+/* HOME PAGE */
+.main-container {
+  padding: 40px 60px;
+  text-align: left;
+}
+
+/* HOME TEXT */
+.home-text {
+  font-size: 34px;
+  font-weight: bold;
+  color: #0F172A;
+  margin-bottom: 12px;
+}
+
+/* WELCOME TEXT */
+.welcome-txt {
+  font-size: 24px;
+  color: #334155;
+}
+
+/* PROFILE & TASKS CONTAINER */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+  padding-left: 60px;
+  color: #0F172A;
+}
+
+/* SECTION HEADINGS */
+.container h3 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  text-decoration: underline;
+
+  color: #1E293B;
+}
+
+/* PROFILE DETAILS */
+.profile-details,
+.task-list {
+  width: 100%;
+}
+
+/* TEXT ITEMS */
+.profile-details p,
+.task-list p {
+  font-size: 22px;
+  margin: 15px 0;
+  padding: 0;
+
+  color: #0F172A;
+  text-align: left;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+/* SHIFT NOTE */
+.shift-note {
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: 22px;
+  color: #0F172A;
+  line-height: 1.5;
+}
+
+/* LOGIN SCREEN */
+.login-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  color: #1E293B;
+}
