@@ -12,10 +12,16 @@ Currently, two official plugins are available:
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 # Dashboard
 A modern and responsive dashboard web application built using HTML, CSS, and JavaScript, react. It features interactive UI components and a clean user-friendly design suitable for admin panels and business management systems.
- 
+
+
+## Using in this project
+Router (BowserRouter): Routing component from React Router & Enables navigation between different pages without reloading.
+Routes:	Container for all routes &	Manages which page should render for each URL.
+Route: Defines individual page paths &	Connects URLs like /home, /profile, and /tasks to components.
+Link:	Navigation link component	& Allows smooth page navigation using navbar links.
+Navigate: Redirect component	& Automatically redirects / path to /home.
+useState Hook: 	React state management hook	& Stores login/logout authentication state.
+Navbar: Navigation section (custom UI structure) & Helps users access Home, Profile, and Tasks pages
