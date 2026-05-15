@@ -1,11 +1,11 @@
-/* GLOBAL RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+
 html,
 body,
 #root {
@@ -16,12 +16,12 @@ body,
   color: #0F172A;
 }
 
-/* APP */
+
 .app-container {
   width: 100%;
 }
 
-/* NAVBAR */
+
 .navbar {
   background-color: #1E293B;
   color: white;
@@ -32,13 +32,13 @@ body,
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
-/* LEFT NAV LINKS */
+
 .nav-left {
   display: flex;
   gap: 50px;
 }
 
-/* NAV LINKS */
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -51,14 +51,14 @@ body,
   color: #38BDF8;
 }
 
-/* RIGHT SIDE */
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-/* EMPLOYEE INFO */
+
 .employee-info {
   text-align: center;
   line-height: 1.5;
@@ -67,7 +67,7 @@ body,
   color: #E2E8F0;
 }
 
-/* LOGOUT BUTTON */
+
 .logout-box {
   background-color: transparent;
   color: white;
@@ -89,13 +89,13 @@ body,
   color: #0F172A;
 }
 
-/* HOME PAGE */
+
 .main-container {
   padding: 40px 60px;
   text-align: left;
 }
 
-/* HOME TEXT */
+
 .home-text {
   font-size: 34px;
   font-weight: bold;
@@ -103,13 +103,13 @@ body,
   margin-bottom: 12px;
 }
 
-/* WELCOME TEXT */
+
 .welcome-txt {
   font-size: 24px;
   color: #334155;
 }
 
-/* PROFILE & TASKS CONTAINER */
+
 .container {
   width: 100%;
   display: flex;
@@ -120,7 +120,7 @@ body,
   color: #0F172A;
 }
 
-/* SECTION HEADINGS */
+
 .container h3 {
   font-size: 40px;
   margin-bottom: 25px;
@@ -129,13 +129,13 @@ body,
   color: #1E293B;
 }
 
-/* PROFILE DETAILS */
+
 .profile-details,
 .task-list {
   width: 100%;
 }
 
-/* TEXT ITEMS */
+
 .profile-details p,
 .task-list p {
   font-size: 22px;
@@ -149,7 +149,7 @@ body,
   line-height: 1.5;
 }
 
-/* SHIFT NOTE */
+
 .shift-note {
   margin-top: 18px;
   font-weight: bold;
@@ -158,7 +158,7 @@ body,
   line-height: 1.5;
 }
 
-/* LOGIN SCREEN */
+
 .login-placeholder {
   display: flex;
   justify-content: center;
