@@ -1,52 +1,55 @@
-import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
- Navigate,
-} from 'react-router-dom';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link,Navigate,} from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+import Login from "./pages/Login";
 
-import './App.css';
 
 const Home = () => (
   <div className="main-container">
     <p className="home-text">Home</p>
-    <h1 className="welcome-txt">Welcome Shubham</h1>
+    <h1 className="welcome-txt">
+      Welcome Shubham
+    </h1>
   </div>
 );
 
 const Profile = () => (
   <div className="container">
+
     <h3>My Profile</h3>
 
     <div className="profile-details">
 
-  <p>
-    <strong>Designation:</strong> Junior Developer
-  </p>
+      <p>
+        <strong>Designation:</strong> Junior Developer
+      </p>
 
-  <p>
-    <strong>Employee ID:</strong> IT101
-  </p>
+      <p>
+        <strong>Employee ID:</strong> IT101
+      </p>
 
-  <p>
-    <strong>Address:</strong> Electronic City Phase-II
-  </p>
+      <p>
+        <strong>Address:</strong> Electronic City Phase-II
+      </p>
 
-  <p>
-    <strong>Shift Timings:</strong> 9 am - 7 pm (General Shift)
-  </p>
+      <p>
+        <strong>Shift Timings:</strong> 9 am - 7 pm
+      </p>
 
-</div>
+    </div>
+
   </div>
 );
 
 const Tasks = () => (
   <div className="container">
+
     <h3>My Tasks</h3>
 
     <div className="task-list">
+
       <p>
         <strong>Task 1:</strong> Completed
       </p>
@@ -63,36 +66,43 @@ const Tasks = () => (
         <strong>Task 4:</strong> In Progress
       </p>
 
-      <p className="shift-note">
-  <strong>Shift :</strong> 9 am - 7 pm (General Shift)
-</p>
     </div>
+
   </div>
 );
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogout = () => {
-    setIsAuthenticated(false);
-    alert('Logged out');
+
+    toast.success("Logged out successfully!");
+
+    setTimeout(() => {
+      setIsAuthenticated(false);
+    }, 1000);
   };
 
   if (!isAuthenticated) {
     return (
-      <div className="login-placeholder">
-        Please Login to continue.
-      </div>
+      <Router>
+        <Login setIsAuthenticated={setIsAuthenticated} />
+      </Router>
     );
   }
 
   return (
     <Router>
+
+      <ToastContainer />
+
       <div className="app-container">
 
         <nav className="navbar">
 
           <div className="nav-left">
+
             <Link to="/home" className="nav-link">
               Home
             </Link>
@@ -104,9 +114,11 @@ function App() {
             <Link to="/tasks" className="nav-link">
               My Tasks
             </Link>
+
           </div>
 
           <div className="nav-right">
+
             <div className="employee-info">
               <p>Shubham</p>
               <p>Employee</p>
@@ -117,20 +129,30 @@ function App() {
               className="logout-box"
               onClick={handleLogout}
             >
-              Log Out
+              Logout
             </button>
+
           </div>
 
         </nav>
 
         <Routes>
+
           <Route path="/home" element={<Home />} />
+
           <Route path="/profile" element={<Profile />} />
+
           <Route path="/tasks" element={<Tasks />} />
-          <Route path="/" element={<Navigate to="/home" />} />
+
+          <Route
+            path="/"
+            element={<Navigate to="/home" />}
+          />
+
         </Routes>
 
       </div>
+
     </Router>
   );
 }
