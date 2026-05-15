@@ -5,13 +5,14 @@ import "react-toastify/dist/ReactToastify.css";
 function Login({ setIsAuthenticated }) {
 
   const [email, setEmail] = useState("");
+  const[username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
   const handleLogin = (e) => {
 
     e.preventDefault();
 
-    if (!email || !password) {
+    if (!email ||!username || !password) {
       toast.error("Fill all inputs");
       return;
     }
@@ -37,6 +38,14 @@ function Login({ setIsAuthenticated }) {
 
         <form onSubmit={handleLogin}>
 
+          <input
+            className="email-box"
+            type="text"
+            placeholder="Enter Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          
           <input
             className="email-box"
             type="email"

@@ -1,0 +1,268 @@
+/* Login.css */
+
+.login-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F3F4F6; /* Optional light background for contrast */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.login-panel {
+  display: flex;
+  width: 1000px;
+  height: 600px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Left Side Styling */
+.login-panel-left {
+  position: relative;
+  width: 40%;
+  color: white;
+}
+
+.login-panel-left .background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85); /* Darken image slightly for text contrast */
+}
+
+.nucleus-header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.nucleus-logo {
+  fill: white;
+}
+
+.nucleus-brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.testimonial-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 2;
+}
+
+.testimonial-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.testimonial-author {
+  margin: 0;
+  font-weight: 600;
+}
+
+.testimonial-title {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Right Side Styling */
+.login-panel-right {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.welcome-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.welcome-subtext {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+/* Input Styling */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: #6D28D9;
+  outline: none;
+}
+
+/* password input specific styling for the purple border */
+.password-box {
+  border-color: #A78BFA;
+}
+
+.password-box:focus {
+  border-color: #6D28D9;
+  box-shadow: 0 0 0 2px rgba(109, 40, 217, 0.1);
+}
+
+.form-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.forgot-password {
+  color: #6D28D9;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.remember-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Standard CSS Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #6D28D9;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Button Styling */
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6D28D9;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #5B21B6;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  text-align: center;
+  color: #AAA;
+  font-size: 0.8rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #EEE;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #EEE;
+  border-radius: 6px;
+  background-color: white;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.signup-text {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup-text a {
+  color: #6D28D9;
+  text-decoration: none;
+  font-weight: 600;
+}
